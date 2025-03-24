@@ -28,7 +28,7 @@ public class Abstractcomp {
 	
 	@FindBy (xpath ="//button[@routerlink='/dashboard/cart']")
 	WebElement carticon;
-
+   By Carticon = By.xpath("//button[@routerlink='/dashboard/cart']");
 	@FindBy (xpath ="//button[@routerlink='/dashboard/myorders']")
 	WebElement ordericon;
 	
@@ -41,7 +41,8 @@ public class Abstractcomp {
 		wait.until(ExpectedConditions.invisibilityOf(ele));
 	}
 	
-	public cartPage gotocart() {
+	public cartPage gotocart() throws InterruptedException  {
+		Thread.sleep(5000);
 		carticon.click();
 		cartPage cart = new cartPage(driver);
 		return cart;

@@ -85,13 +85,13 @@ public class BaseSetup {
 	}
 	
 	
-public void getSS() throws IOException {
-	Date dtt =new Date();
-	String filename = dtt.toString().replace(" ","-").replace(":","-");
+public String getSS(String testName,WebDriver driver) throws IOException {
+
 	TakesScreenshot ts = (TakesScreenshot)driver;
 	File source = ts.getScreenshotAs(OutputType.FILE);
-	FileUtils.copyFile(source,  new File(".//screenshot//" + filename + ".png"));
-	
+	File file = new File(System.getProperty("user.dir")+"//reports//"+ testName + ".png");
+	FileUtils.copyFile(source, file);
+	return System.getProperty("user.dir")+"//reports//"+ testName + ".png";
 }
 
 

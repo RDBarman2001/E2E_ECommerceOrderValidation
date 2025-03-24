@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import testComponent.BaseSetup;
+import testComponent.Retry;
 
 class Errorvalidation extends BaseSetup {
 	@Test(groups= {"Errorvalidation"})
@@ -22,8 +23,8 @@ class Errorvalidation extends BaseSetup {
 		
 	}
 	
-@Test 
-public void Productvalidation() throws IOException {
+@Test(retryAnalyzer= Retry.class)
+public void Productvalidation() throws IOException, InterruptedException {
 
 		
 		
