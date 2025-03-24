@@ -9,11 +9,12 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import testComponent.BaseSetup;
+import testComponent.Retry;
 
 class BaseTest extends BaseSetup {
 
-	@Test(dataProvider ="getData",groups= {"buy"})
-	public void submitOrder(HashMap <String,String> input) throws IOException {
+	@Test(dataProvider ="getData",groups= {"buy"},retryAnalyzer= Retry.class)
+	public void submitOrder(HashMap <String,String> input) throws IOException, InterruptedException {
 				// Launching the Web Site
 		
 		// log in into account
