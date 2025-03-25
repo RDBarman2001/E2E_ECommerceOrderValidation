@@ -45,7 +45,7 @@ public class BaseSetup {
 			options.addArguments("headless");
 			}
 			driver = new ChromeDriver(options);
-			driver.manage().window().setSize(new Dimension(1440,900));//full screen in headless
+			driver.manage().window().setSize(new Dimension(1440,900));//full screen in headless for chrome
 		}
 
 		else if (browserName.equalsIgnoreCase("Firefox")) {
