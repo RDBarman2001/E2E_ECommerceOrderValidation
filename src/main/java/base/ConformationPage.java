@@ -19,7 +19,7 @@ public class ConformationPage extends Abstractcomp {
 
 	@FindBy(xpath = "//h1[@class='hero-primary']")
 	WebElement heading;
-	By header = By.xpath("//h1[@class='hero-primary']");
+	private By header = By.xpath("//h1[@class='hero-primary']");
 
 	public String getconformationMessage()
 

@@ -21,16 +21,21 @@ public class ProductCatalog extends Abstractcomp {
 	}
 
 	@FindBy(css = ".mb-3")
-	List<WebElement> products;
+
+	private List<WebElement> products;
 	
 
 	@FindBy(css = ".ng-animating")
-	WebElement spinner;
+ 
+	private WebElement spinner;
 	
 
-	By productsby = By.cssSelector(".mb-3");
-	By addtoCart = By.cssSelector(".card-body button:last-of-type");
-	By toastMessage = By.id("toast-container");
+
+	private	By productsby = By.cssSelector(".mb-3");
+
+	private	By addtoCart = By.cssSelector(".card-body button:last-of-type");
+
+	private	By toastMessage = By.id("toast-container");
 
 	public List<WebElement> getProductlist() {
 		waitForElement(productsby);

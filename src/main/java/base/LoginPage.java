@@ -21,17 +21,22 @@ public class LoginPage extends Abstractcomp {
 	}
 	
 	@FindBy(id="userEmail")
-	WebElement username ;
+
+	private WebElement username ;
 
 	
 	@FindBy(id="userPassword")
-	WebElement passwordele ;
+
+	private WebElement passwordele ;
 	
 	@FindBy(id="login")
-	WebElement Login ;
+
+	private WebElement Login ;
 	@FindBy (css="[class*='flyInOut']")
-	WebElement errorMessage;
-	By error = By.cssSelector("[class*='flyInOut']");
+
+	private WebElement errorMessage;
+
+	private By error = By.cssSelector("[class*='flyInOut']");
 	public ProductCatalog login(String email,String password) {
 		username.sendKeys(email);
 		passwordele.sendKeys(password);

@@ -21,13 +21,13 @@ public class CheckoutPage extends  Abstractcomp {
 	}
 	
 	@FindBy(xpath="//input[@placeholder='Select Country']")
-	WebElement countryfiled;
+	private WebElement countryfiled;
 
 	@FindBy(css=".ta-item:nth-of-type(2)")
-	WebElement countrySelect;
+	private WebElement countrySelect;
 	
 	@FindBy(xpath ="//a[ text() ='Place Order ']")
-	WebElement submit;
+	private WebElement submit;
 	
 	By results = By.cssSelector(".ta-results");
 	

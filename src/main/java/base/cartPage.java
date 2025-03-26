@@ -22,11 +22,11 @@ public class cartPage extends Abstractcomp {
 	}
 
 	@FindBy(xpath="//div[@class ='cartSection']/h3")
-	List<WebElement> cartProducts ;
+	private List<WebElement> cartProducts ;
 	
 
 	@FindBy(xpath="// button[text()='Checkout']")
-	WebElement CheckoutButton ;
+	private WebElement CheckoutButton ;
 	
 	public boolean verifyProductDisplay(String productName) {
 		

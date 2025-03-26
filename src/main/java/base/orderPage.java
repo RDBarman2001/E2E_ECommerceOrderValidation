@@ -22,7 +22,8 @@ public class orderPage extends Abstractcomp {
 	}
 
 	@FindBy(css="tr td:nth-child(3)")
-	List<WebElement> orderName ;
+ 
+	private List<WebElement> orderName ;
 	
 	
 	public boolean verifyorderDisplay(String productName) {
