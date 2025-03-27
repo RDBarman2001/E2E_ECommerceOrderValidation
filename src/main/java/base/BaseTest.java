@@ -39,7 +39,7 @@ class BaseTest extends BaseSetup {
 	}
 	
 	@Test(dependsOnMethods = {"submitOrder"},dataProvider ="getData")
-	public void orderHistorytest(HashMap <String,String> input) {
+	public void orderHistorytest(HashMap <String,String> input) throws InterruptedException {
 		ProductCatalog productcatalogue = loginPage.login(input.get("email"), input.get("password"));
 		orderPage order = productcatalogue.gotoOrderPage();
 		Assert.assertTrue(order.verifyorderDisplay(input.get("product")));

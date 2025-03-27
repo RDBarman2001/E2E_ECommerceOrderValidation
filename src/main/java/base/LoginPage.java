@@ -40,6 +40,7 @@ public class LoginPage extends Abstractcomp {
 	public ProductCatalog login(String email,String password) {
 		username.sendKeys(email);
 		passwordele.sendKeys(password);
+		
 		Login.click();
 		ProductCatalog productcatalogue = new ProductCatalog(driver);
 		return productcatalogue;

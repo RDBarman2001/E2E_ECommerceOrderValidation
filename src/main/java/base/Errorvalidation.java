@@ -11,7 +11,7 @@ import testComponent.Retry;
 class Errorvalidation extends BaseSetup {
 	@Test(groups= {"Errorvalidation"})
 	
-	public void Loginvalidation() throws IOException {
+	public void Loginvalidation() throws IOException, InterruptedException {
 
 		
 		
